@@ -1,1 +1,95 @@
-# Document-Site
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XFilesPro</title>
+    <link rel="stylesheet" href="styles.css">    
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="#"><img src="Xfilespro logo.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="Headdocumentation.html">Documentation</a></li>
+                <li><a href="ReleaseNotes.html">Release Notes</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <button class="toggle-btn" onclick="toggleDarkMode()">Dark Mode</button>
+
+    
+
+    <section class="content-data" >
+        <a href="Storage.html" class="card">
+            <i class="fa fa-cloud-upload"></i>
+            <h3>Storage & Collaboration</h3>
+            <p>Manage files efficiently with secure cloud storage solutions.</p>
+        </a>
+        <a href="Document.html" class="card">
+            <i class="fa fa-file"></i>
+            <h3>Document Generation</h3>
+            <p>Automate document creation with smart AI tools.</p>
+        </a>
+        <a href="Archive.html" class="card">
+            <i class="fa fa-archive"></i>
+            <h3>Data Archive</h3>
+            <p>Archive your critical business data with ease and simple.</p>
+        </a>
+        <a href="Backup.html" class="card">
+            <i class="fa fa-database"></i>
+            <h3>Data Backup</h3>
+            <p>Ensure data safety with automatic backup solutions.</p>
+        </a>
+        <a href="Xemail.html" class="card">
+            <i class="fa fa-envelope"></i>
+            <h3>XEmail</h3>
+            <p>Secure email solutions tailored for your business needs.</p>
+        </a>
+        <a href="XExpress.html" class="card">
+            <i class="fa fa-bolt"></i>
+            <h3>XTract</h3>
+            <p>Fast and efficient document processing made simple.</p>
+        </a>
+    </section>
+
+
+
+    <footer class="footer">
+        <p>&copy; 2025 XFilesPro | All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/xfilespro">Facebook</a>
+            <a href="https://x.com/xfiles_pro">Twitter</a>
+            <a href="https://www.instagram.com/xfiles_pro/">Instagram</a>
+        </div>
+    </footer>
+</body>
+
+<script>
+    window.addEventListener("scroll", function() {
+        let header = document.getElementById("header");
+        if (window.scrollY > 50) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    });
+
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+        let button = document.querySelector(".toggle-btn");
+        button.textContent = document.body.classList.contains("dark-mode") ? "Light Mode" : "Dark Mode";
+    }
+
+
+</script>
+</html>
