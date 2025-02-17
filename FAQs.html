@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XFilesPro</title>
+    <link rel="stylesheet" href="styles.css">    
+    <link rel="stylesheet" href="styles.css">   
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="demo.html"><img src="Xfilespro logo.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="Headdocumentation.html">Documentation</a></li>
+                <li><a href="ReleaseNotes.html">Release Notes</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <button class="toggle-btn" onclick="toggleDarkMode()">Dark Mode</button>
+
+    <main class="faq-container">
+      <!-- <h1>Frequently Asked Questions</h1> -->
+
+      <div class="faq">
+          <h2>General Questions</h2>
+          <div class="faq-item">
+              <h3>What is XFilesPro?</h3>
+              <p>XFilesPro is a powerful file management solution designed to enhance your document organization and security.</p>
+          </div>
+          <div class="faq-item">
+              <h3>How do I install XFilesPro?</h3>
+              <p>Follow the installation guide provided in the documentation. Ensure you meet system requirements before installation.</p>
+          </div>
+          <div class="faq-item">
+              <h3>What are the system requirements?</h3>
+              <p>XFilesPro requires a minimum of 4GB RAM, 500MB disk space, and an active internet connection for updates.</p>
+          </div>
+      </div>
+
+      <div class="faq">
+          <h2>Technical Questions</h2>
+          <div class="faq-item">
+              <h3>How do I integrate XFilesPro with my existing system?</h3>
+              <p>XFilesPro provides API integration and supports various platforms for seamless workflow.</p>
+          </div>
+          <div class="faq-item">
+              <h3>Does XFilesPro support API integration?</h3>
+              <p>Yes, XFilesPro offers RESTful APIs for developers to connect with other software systems.</p>
+          </div>
+          <div class="faq-item">
+              <h3>How do I resolve common installation issues?</h3>
+              <p>Check the troubleshooting guide in the documentation or contact our support team.</p>
+          </div>
+      </div>
+
+      <div class="faq">
+          <h2>Billing & Licensing</h2>
+          <div class="faq-item">
+              <h3>What pricing plans are available?</h3>
+              <p>We offer multiple plans, including monthly and annual subscriptions. Visit our pricing page for details.</p>
+          </div>
+          <div class="faq-item">
+              <h3>Do you offer a free trial?</h3>
+              <p>Yes, a 14-day free trial is available with limited features.</p>
+          </div>
+          <div class="faq-item">
+              <h3>How can I upgrade or cancel my subscription?</h3>
+              <p>You can upgrade or cancel your subscription via the account settings in your dashboard.</p>
+          </div>
+      </div>
+  </main>
+
+
+
+    <footer class="footer">
+        <p>&copy; 2025 XFilesPro | All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/xfilespro">Facebook</a>
+            <a href="https://x.com/xfiles_pro">Twitter</a>
+            <a href="https://www.instagram.com/xfiles_pro/">Instagram</a>
+        </div>
+    </footer>
+</body>
+
+<script>
+    window.addEventListener("scroll", function() {
+        let header = document.getElementById("header");
+        if (window.scrollY > 50) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    });
+
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+        let button = document.querySelector(".toggle-btn");
+        button.textContent = document.body.classList.contains("dark-mode") ? "Light Mode" : "Dark Mode";
+    }
+
+
+</script>
+</html>

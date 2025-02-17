@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XFilesPro</title>
+    <link rel="stylesheet" href="styles.css">    
+    <link rel="stylesheet" href="styles.css">   
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="demo.html"><img src="Xfilespro logo.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="Headdocumentation.html">Documentation</a></li>
+                <li><a href="ReleaseNotes.html">Release Notes</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <button class="toggle-btn" onclick="toggleDarkMode()">Dark Mode</button>
+    
+    <div class="layout"> 
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#features">Key Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#use-cases">Use Cases</a></li>
+                <li><a href="#integration">Integration</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="#support">Support</a></li>
+            </ul>
+        </nav>
+    
+        <main class="content">
+            <section id="overview">
+                <h2>Overview</h2>
+                <p>**Extract** is an advanced document processing tool that enables users to extract relevant data from files, emails, and cloud storage automatically. It simplifies data retrieval by leveraging AI-powered text recognition and structured data extraction.</p>
+            </section>
+    
+            <section id="features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>● **AI-Powered Data Extraction** – Extracts key information from PDFs, images, and documents.</li>
+                    <li>● **OCR Technology** – Converts scanned documents into editable text.</li>
+                    <li>● **Automated Data Classification** – Categorizes extracted data for better organization.</li>
+                    <li>● **Cloud & Local File Extraction** – Works with Google Drive, Dropbox, OneDrive, and local files.</li>
+                    <li>● **Seamless Integration** – Connects with CRMs, databases, and other third-party tools.</li>
+                </ul>
+            </section>
+    
+            <section id="how-it-works">
+                <h2>How It Works</h2>
+                <p>Using **Extract** is simple and efficient. Follow these steps:</p>
+                <ol>
+                    <li>● **Upload Your Document** – Choose a PDF, image, or text file.</li>
+                    <li>● **Select Extraction Type** – Define what data needs to be extracted (e.g., names, dates, numbers).</li>
+                    <li>● **Run Extraction Process** – The AI-powered engine will analyze and extract data.</li>
+                    <li>● **Download or Export** – Save extracted data or export it to your preferred format.</li>
+                </ol>
+            </section>
+    
+            <section id="use-cases">
+                <h2>Use Cases</h2>
+                <p>**Extract** can be used in various industries, including:</p>
+                <ul>
+                    <li>● **Finance** – Extract financial data from invoices, bank statements, and reports.</li>
+                    <li>● **Healthcare** – Retrieve patient details and medical records from scanned documents.</li>
+                    <li>● **Legal** – Process contracts, agreements, and legal documents efficiently.</li>
+                    <li>● **Retail & E-commerce** – Extract order details and invoices from receipts.</li>
+                    <li>● **Education** – Automate data collection from research papers and student records.</li>
+                </ul>
+            </section>
+    
+            <section id="integration">
+                <h2>Integration</h2>
+                <p>Connect **Extract** with your existing tools:</p>
+                <ul>
+                    <li>● **CRM Integration** – Sync extracted data with Salesforce, HubSpot, and Zoho.</li>
+                    <li>● **Cloud Storage** – Automatically process documents from Google Drive, Dropbox, OneDrive.</li>
+                    <li>● **Database Export** – Store structured data in SQL or NoSQL databases.</li>
+                </ul>
+            </section>
+    
+            <section id="faqs">
+                <h2>Frequently Asked Questions</h2>
+                <p><strong>Q: What file formats does Extract support?</strong></p>
+                <p>A: Extract supports PDF, JPG, PNG, DOCX, and TXT file formats.</p>
+                <p><strong>Q: Can I automate data extraction?</strong></p>
+                <p>A: Yes, you can set up automated workflows for scheduled data extraction.</p>
+                <p><strong>Q: Is Extract compatible with cloud storage?</strong></p>
+                <p>A: Yes, it integrates with Google Drive, OneDrive, Dropbox, and more.</p>
+            </section>
+    
+            <section id="support">
+                <h2>Need Help?</h2>
+                <p>For assistance, contact our support team at <a href="mailto:support@extract.com">support@extract.com</a>.</p>
+            </section>
+        </main>
+    </div>
+    
+
+    <footer class="footer">
+        <p>&copy; 2025 XFilesPro | All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/xfilespro">Facebook</a>
+            <a href="https://x.com/xfiles_pro">Twitter</a>
+            <a href="https://www.instagram.com/xfiles_pro/">Instagram</a>
+        </div>
+    </footer>
+</body>
+
+<script>
+    window.addEventListener("scroll", function() {
+        let header = document.getElementById("header");
+        if (window.scrollY > 50) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".sidebar ul li a");
+    const sections = document.querySelectorAll("section");
+
+    links.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            // Remove 'active' class from all links
+            links.forEach(item => item.classList.remove("active"));
+
+            // Add 'active' class to clicked link
+            this.classList.add("active");
+
+            // Get target section ID
+            const targetId = this.getAttribute("href").substring(1);
+            sections.forEach(section => {
+                section.classList.remove("active");
+                if (section.id === targetId) {
+                    section.classList.add("active");
+                }
+            });
+
+            // Smooth Scroll to Section
+            document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+        });
+    });
+});
+</script>
+</html>

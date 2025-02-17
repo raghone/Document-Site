@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XFilesPro</title>
+    <link rel="stylesheet" href="styles.css">    
+    <link rel="stylesheet" href="styles.css">   
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="demo.html"><img src="Xfilespro logo.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="Headdocumentation.html">Documentation</a></li>
+                <li><a href="#">Release Notes</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <button class="toggle-btn" onclick="toggleDarkMode()">Dark Mode</button>
+
+    <main class="release-notes-container">
+      <!-- <h1>Release Notes - XFilesPro</h1> -->
+
+      <section class="release">
+          <h2>Version 3.2.0 (February 2025)</h2>
+          <h3>🔹 New Features:</h3>
+          <ul>
+              <li>Dark mode toggle for improved accessibility.</li>
+              <li>Enhanced security with two-factor authentication.</li>
+              <li>Faster data synchronization for better performance.</li>
+          </ul>
+
+          <h3>🐛 Bug Fixes:</h3>
+          <ul>
+              <li>Fixed login issue affecting some users.</li>
+              <li>Resolved navigation bar alignment on mobile devices.</li>
+              <li>Improved UI responsiveness on small screens.</li>
+          </ul>
+
+          <h3>⚡ Enhancements:</h3>
+          <ul>
+              <li>Optimized database queries for faster processing.</li>
+              <li>Improved API response time.</li>
+              <li>Updated UI components for a modern look.</li>
+          </ul>
+      </section>
+
+      <section class="release">
+          <h2>Version 3.1.0 (December 2024)</h2>
+          <h3>🔹 New Features:</h3>
+          <ul>
+              <li>Added support for multiple language translations.</li>
+              <li>Improved user analytics and reporting tools.</li>
+          </ul>
+
+          <h3>🐛 Bug Fixes:</h3>
+          <ul>
+              <li>Fixed broken links in the documentation.</li>
+              <li>Addressed minor UI inconsistencies in the dashboard.</li>
+          </ul>
+
+          <h3>⚡ Enhancements:</h3>
+          <ul>
+              <li>Updated user onboarding experience.</li>
+              <li>Improved error handling for better debugging.</li>
+          </ul>
+      </section>
+
+      <section class="release">
+          <h2>Previous Versions</h2>
+          <ul>
+              <li><strong>Version 3.0.0 (September 2024)</strong> – Major UI redesign, performance upgrades.</li>
+              <li><strong>Version 2.5.0 (June 2024)</strong> – Introduced API integrations.</li>
+          </ul>
+      </section>
+  </main>
+
+
+
+    <footer class="footer">
+        <p>&copy; 2025 XFilesPro | All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/xfilespro">Facebook</a>
+            <a href="https://x.com/xfiles_pro">Twitter</a>
+            <a href="https://www.instagram.com/xfiles_pro/">Instagram</a>
+        </div>
+    </footer>
+</body>
+
+<script>
+    window.addEventListener("scroll", function() {
+        let header = document.getElementById("header");
+        if (window.scrollY > 50) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    });
+
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+        let button = document.querySelector(".toggle-btn");
+        button.textContent = document.body.classList.contains("dark-mode") ? "Light Mode" : "Dark Mode";
+    }
+
+
+</script>
+</html>

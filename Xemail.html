@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XFilesPro</title>
+    <link rel="stylesheet" href="styles.css">    
+    <link rel="stylesheet" href="styles.css">   
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="demo.html"><img src="Xfilespro logo.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="Headdocumentation.html">Documentation</a></li>
+                <li><a href="ReleaseNotes.html">Release Notes</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <button class="toggle-btn" onclick="toggleDarkMode()">Dark Mode</button>
+
+    <div class="layout"> 
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#features">Key Features</a></li>
+                <li><a href="#setup">Getting Started</a></li>
+                <li><a href="#automation">Email Automation</a></li>
+                <li><a href="#security">Security & Compliance</a></li>
+                <li><a href="#integration">Third-Party Integrations</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="#support">Support</a></li>
+            </ul>
+        </nav>
+    
+        <main class="content">
+            <section id="overview">
+                <h2>Overview</h2>
+                <p>**XEmail** is a powerful and secure email management solution designed for seamless communication and automation. Whether you need to send bulk emails, automate workflows, or enhance email security, XEmail provides a reliable platform for all your business needs.</p>
+            </section>
+    
+            <section id="features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>● **Bulk Email Sending** – Efficiently send high-volume emails with ease.</li>
+                    <li>● **Smart Email Templates** – Predefined and customizable email templates.</li>
+                    <li>● **Email Tracking & Analytics** – Monitor open rates, click rates, and delivery status.</li>
+                    <li>● **Auto-Response & Scheduling** – Automate replies and schedule emails.</li>
+                    <li>● **Spam Protection & Encryption** – Secure your emails with advanced encryption.</li>
+                </ul>
+            </section>
+    
+            <section id="setup">
+                <h2>Getting Started</h2>
+                <p>To start using **XEmail**, follow these simple steps:</p>
+                <ol>
+                    <li>● **Sign Up** – Register and log in to your XEmail account.</li>
+                    <li>● **Configure Email Settings** – Set up SMTP, IMAP, or POP3 based on your needs.</li>
+                    <li>● **Create Your First Email** – Use our drag-and-drop email builder or predefined templates.</li>
+                    <li>● **Send or Schedule** – Choose to send instantly or schedule for later.</li>
+                </ol>
+            </section>
+    
+            <section id="automation">
+                <h2>Email Automation</h2>
+                <p>With **XEmail's automation**, you can:</p>
+                <ul>
+                    <li>● **Set Auto-Replies** – Instantly respond to inquiries.</li>
+                    <li>● **Create Drip Campaigns** – Automate follow-ups and nurture leads.</li>
+                    <li>● **Trigger-Based Emails** – Send emails based on user actions.</li>
+                    <li>● **Custom Workflows** – Build email sequences for different use cases.</li>
+                </ul>
+            </section>
+    
+            <section id="security">
+                <h2>Security & Compliance</h2>
+                <p>**XEmail** ensures your emails remain secure and compliant with industry standards:</p>
+                <ul>
+                    <li>● **AES-256 Encryption** – Protects sensitive email data.</li>
+                    <li>● **Spam Filtering & Blacklist Monitoring** – Prevents spam issues.</li>
+                    <li>● **GDPR & HIPAA Compliance** – Meets regulatory email communication standards.</li>
+                    <li>● **Two-Factor Authentication (2FA)** – Adds an extra layer of security.</li>
+                </ul>
+            </section>
+    
+            <section id="integration">
+                <h2>Third-Party Integrations</h2>
+                <p>Connect **XEmail** with your favorite tools:</p>
+                <ul>
+                    <li>● **CRM Integration** – Sync with Salesforce, HubSpot, or Zoho.</li>
+                    <li>● **Marketing Platforms** – Integrate with Mailchimp, SendGrid, and more.</li>
+                    <li>● **Cloud Storage Services** – Store attachments in Google Drive, Dropbox, or OneDrive.</li>
+                </ul>
+            </section>
+    
+            <section id="faqs">
+                <h2>Frequently Asked Questions</h2>
+                <p><strong>Q: How many emails can I send per day?</strong></p>
+                <p>A: It depends on your plan. Free users can send up to 500 emails per day, while premium users have higher limits.</p>
+                <p><strong>Q: Can I track email open rates?</strong></p>
+                <p>A: Yes, XEmail provides real-time tracking and analytics.</p>
+                <p><strong>Q: Is my email data safe?</strong></p>
+                <p>A: Absolutely! We use AES-256 encryption and comply with GDPR regulations.</p>
+            </section>
+    
+            <section id="support">
+                <h2>Need Help?</h2>
+                <p>For assistance, contact our support team at <a href="mailto:support@xemail.com">support@xemail.com</a>.</p>
+            </section>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; 2025 XFilesPro | All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/xfilespro">Facebook</a>
+            <a href="https://x.com/xfiles_pro">Twitter</a>
+            <a href="https://www.instagram.com/xfiles_pro/">Instagram</a>
+        </div>
+    </footer>
+</body>
+
+<script>
+    window.addEventListener("scroll", function() {
+        let header = document.getElementById("header");
+        if (window.scrollY > 50) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    });
+
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+        let button = document.querySelector(".toggle-btn");
+        button.textContent = document.body.classList.contains("dark-mode") ? "Light Mode" : "Dark Mode";
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".sidebar ul li a");
+    const sections = document.querySelectorAll("section");
+
+    links.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            // Remove 'active' class from all links
+            links.forEach(item => item.classList.remove("active"));
+
+            // Add 'active' class to clicked link
+            this.classList.add("active");
+
+            // Get target section ID
+            const targetId = this.getAttribute("href").substring(1);
+            sections.forEach(section => {
+                section.classList.remove("active");
+                if (section.id === targetId) {
+                    section.classList.add("active");
+                }
+            });
+
+            // Smooth Scroll to Section
+            document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+        });
+    });
+});
+</script>
+</html>

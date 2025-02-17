@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XFilesPro</title>
+    <link rel="stylesheet" href="styles.css">    
+    <link rel="stylesheet" href="styles.css">   
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <style>
+      html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+    </style>
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="demo.html"><img src="Xfilespro logo.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="Headdocumentation.html">Documentation</a></li>
+                <li><a href="ReleaseNotes.html">Release Notes</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <button class="toggle-btn" onclick="toggleDarkMode()">Dark Mode</button>
+    
+    
+ <section class="contact" >
+  <form action="#">
+      <div class="input-box">
+          <div class="input-field">
+             <input type="text" placeholder="Full Name" required>
+             <span class="focus"></span>
+          </div>
+          <div class="input-field">
+             <input type="text" placeholder="Email Address" required>
+             <span class="focus"></span>
+          </div>
+      
+
+         <div class="input-field">
+             <input type="number" placeholder="Mobile Number" required>
+              <span class="focus"></span>
+           </div>
+         <div class="input-field">
+             <input type="text" placeholder="Email Subject" required>
+             <span class="focus"></span>
+          </div>
+     </div>
+
+      <div class="textarea-field">
+          <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+          <span class="focus"></span>
+      </div>
+
+      <div class="btn-box btns">
+          <button type="submit" class="btn">Submit</button>
+      </div>
+  </form>
+</section> 
+
+    <footer class="footer">
+        <p>&copy; 2025 XFilesPro | All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/xfilespro">Facebook</a>
+            <a href="https://x.com/xfiles_pro">Twitter</a>
+            <a href="https://www.instagram.com/xfiles_pro/">Instagram</a>
+        </div>
+    </footer>
+</body>
+
+<script>
+    window.addEventListener("scroll", function() {
+        let header = document.getElementById("header");
+        if (window.scrollY > 50) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    });
+
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+        let button = document.querySelector(".toggle-btn");
+        button.textContent = document.body.classList.contains("dark-mode") ? "Light Mode" : "Dark Mode";
+    }
+</script>
+</html>
